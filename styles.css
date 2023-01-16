@@ -6,49 +6,208 @@
   --width-desktop: 1440px;
 
   /* Colors */
-  --dark-blue: hsl(233, 47%, 7%);
-  --blue: hsl(244, 38%, 16%);
-  --violet: #ab5cdb;
+  --blue-200: hsl(233, 47%, 7%);
+  --blue-100: hsl(244, 38%, 16%);
+  --violet: hsl(277, 64%, 61%);
   --white-100: hsl(0, 0%, 100%);
   --white-75: hsla(0, 0%, 100%, 0.75);
   --white-60: hsla(0, 0%, 100%, 0.6);
 
   /* Type */
   --font-size: 15px;
-  --font-inter: "Inter", sans-serif;
-  --font-deca: "Lexend Deca", sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-deca: 'Lexend Deca', sans-serif;
+
+  /* Sizing */
+  --max-width: 327px;
 }
 
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 * {
   margin: 0;
 }
-html, body {
-  height: 100%;
-}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  
 }
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
+/* Visually Hidden Class */
 
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Styles */
+
+html,
+body {
+  background-color: var(--blue-200);
+}
+
+body {
+  font-family: var(--font-inter);
+  color: var(--white-100);
+  /* Center the card on the body */
+  display: grid;
+  place-content: center;
+  padding-inline: 1rem;
+  padding-block: 3rem;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--blue-100);
+  max-width: var(--max-width);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__image {
+  background-color: var(--violet);
+}
+
+picture {
+  height: 100%;
+}
+
+.card img {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-block-start: 2.5rem;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: bold;
+  margin-block-end: 1rem;
+}
+
+.card__title span {
+  color: var(--violet);
+}
+
+.card__summary {
+  color: var(--white-75);
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  margin-block-end: 2.5rem;
+}
+
+.stats {
+  text-align: center;
+  padding: 0;
+  list-style-type: none;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stats li {
+  width: min-content;
+}
+
+.stats li span:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stats li span:last-child {
+  color: var(--white-60);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: var(--font-deca);
+}
+
+/* Styles for larger screens over 768px */
+
+@media (min-width: 72.5rem) {
+  :root {
+    --max-width: 1110px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .card__content {
+    max-width: 570px;
+    text-align: left;
+    padding: 4.5rem;
+    padding-block-end: 3rem;
+  }
+
+  .card__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    max-width: 18ch;
+    margin-block-end: 1.5rem;
+  }
+
+  .card__summary {
+    max-width: 38ch;
+    margin-block-end: auto;
+  }
+
+  .card__image {
+    min-height: 100%;
+  }
+
+  .stats {
+    flex-direction: row;
+    gap: 3.875rem;
+  }
+}

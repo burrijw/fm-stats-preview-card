@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <body>
+    <main class="card">
+      <h1 class="visually-hidden">Statistics Preview</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <!-- link up them google fonts babay!!! -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
-    rel="stylesheet">
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-
-  <title>Frontend Mentor | Stats preview card component</title>
-
-</head>
-
-<body>
-
-  <main class="main">
-    <!-- start main section for infographic -->
-    <article class="container">
-      <!-- start infographic card  -->
-      <div class="text-content">
-        <!-- this side of the card has the text and stats/labels  -->
-        <div class="headings-wrapper">
-          <h2 class="heading">Get <span>insights</span> that help your business grow.</h2>
-          <p class="subheading">Discover the benefits of data analytics and make better decisions regarding revenue,
-            customer experience, and overall efficiency.
-          </p>
-        </div>
-        <div class="stats-container">
-          <div class="stats">10k+ <span class="stats-label">companies</span></div>
-          <div class="stats">314 <span class="stats-label">templates</span></div>
-          <div class="stats">12m+ <span class="stats-label">queries</span></div>
-        </div>
+      <div class="card__image">
+        <picture>
+          <source
+            media="(min-width: 72.5rem)"
+            srcset="./images/image-header-desktop.jpg"
+          />
+          <img
+            class="card__image"
+            src="/images/image-header-mobile.jpg"
+            alt="people working on laptops around a table, talking and laughing"
+          />
+        </picture>
       </div>
-      <div class="image">
-        <!-- this side is the image  -->
-        <img src="/images/image-header-desktop.jpg" alt="people around a table laughing" srcset="">
-      </div>
-    </article>
-  </main>
-</body>
+      <div class="card__content">
+        <h2 class="card__title">
+          Get <span>insights</span> that help your business grow.
+        </h2>
+        <p class="card__summary">
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
 
+        <ul class="stats">
+          <li>
+            <span>10k+</span>
+            <span>companies</span>
+          </li>
+          <li>
+            <span>314</span>
+            <span>templates</span>
+          </li>
+          <li>
+            <span>12m+</span>
+            <span>queries</span>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>
