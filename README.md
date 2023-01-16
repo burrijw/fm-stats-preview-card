@@ -14,4 +14,4 @@ Users should be able to:
 
 [1]:	https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62
 [2]:	https://your-solution-url.com
-[3]:	https://your-live-site-url.com
+[3]:	https://burrijw.github.io/fm-stats-preview-card/
