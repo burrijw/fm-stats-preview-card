@@ -10,7 +10,7 @@ Users should be able to:
 ## Links
 
 - Solution URL: [Add solution URL here][2]
-- Live Site URL: [Add live site URL here][3]
+- Live Site URL: [https://burrijw.github.io/fm-stats-preview-card/][3]
 
 [1]:	https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62
 [2]:	https://your-solution-url.com
