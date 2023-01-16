@@ -9,9 +9,9 @@ Users should be able to:
 
 ## Links
 
-- Solution URL: [Add solution URL here][2]
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-component-BAIrt6M42j][2]
 - Live Site URL: [https://burrijw.github.io/fm-stats-preview-card/][3]
 
 [1]:	https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62
-[2]:	https://your-solution-url.com
+[2]:	https://www.frontendmentor.io/solutions/stats-preview-card-component-BAIrt6M42j
 [3]:	https://burrijw.github.io/fm-stats-preview-card/
