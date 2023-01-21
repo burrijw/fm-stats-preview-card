@@ -187,7 +187,7 @@ picture {
     max-width: 570px;
     text-align: left;
     padding: 4.5rem;
-    padding-block-end: 3rem;
+    padding-block-end: 3.5rem;
   }
 
   .card__title {
@@ -209,5 +209,6 @@ picture {
   .stats {
     flex-direction: row;
     gap: 3.875rem;
+    text-align: start;
   }
 }
